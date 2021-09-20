@@ -1,0 +1,39 @@
+# Morse Code Translator
+#Chapter 8 Programming Assignment
+
+# Morse Code Dictionary
+MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
+                    'C':'-.-.', 'D':'-..', 'E':'.',
+                    'F':'..-.', 'G':'--.', 'H':'....',
+                    'I':'..', 'J':'.---', 'K':'-.-',
+                    'L':'.-..', 'M':'--', 'N':'-.',
+                    'O':'---', 'P':'.--.', 'Q':'--.-',
+                    'R':'.-.', 'S':'...', 'T':'-',
+                    'U':'..-', 'V':'...-', 'W':'.--',
+                    'X':'-..-', 'Y':'-.--', 'Z':'--..',
+                    '1':'.----', '2':'..---', '3':'...--',
+                    '4':'....-', '5':'.....', '6':'-....',
+                    '7':'--...', '8':'---..', '9':'----.',
+                    '0':'-----', ', ':'--..--', '.':'.-.-.-',
+                    '?':'..--..', '/':'-..-.', '-':'-....-',
+                    '(':'-.--.', ')':'-.--.-'}
+
+#Define the function "encrypt" that will translate the inputted English sentence into Morse code.
+def encrypt(message):
+    cipher = ''
+    for ch in message:
+        if ch != ' ':
+            cipher += MORSE_CODE_DICT[ch] + ' '
+        else:
+            cipher += ' '
+ 
+    return cipher
+
+#Define the main function that asks the user for a sentence, runs it through the encrypt functions then prints the result.
+def main():
+    message = input("Enter a sentence: ")
+    result = encrypt(message.upper())
+    print(result)
+
+if __name__ == '__main__':
+    main()
