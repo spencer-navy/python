@@ -1,0 +1,26 @@
+class Employee:
+    name = ""
+    idNumber = ""
+    department = ""
+    jobTitle = ""
+susanMeyers = Employee()
+susanMeyers.name = "Susan Meyers"
+susanMeyers.idNumber = "47899"
+susanMeyers.department = "Accounting"
+susanMeyers.jobTitle = "Vice President"
+markJones = Employee()
+markJones.name = "Mark Jones"
+markJones.idNumber = "39119"
+markJones.department = "IT"
+markJones.jobTitle = "Programmer"
+joyRogers = Employee()
+joyRogers.name = "Joy Rogers"
+joyRogers.idNumber = "81774"
+joyRogers.department = "Manufacturing"
+joyRogers.jobTitle = "Engineer"
+emp = [susanMeyers, markJones, joyRogers]
+for employee in emp:
+    print("Name: " + employee.name)
+    print("ID Number: " + employee.idNumber)
+    print("Department: " + employee.department)
+    print("Job Title: " + employee.jobTitle, end="\n\n")
